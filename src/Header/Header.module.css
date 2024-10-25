@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  color: var(--color-contrast) !important;
+  font-family: var(--font-primary);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.nav ul {
+  display: flex;
+  gap: var(--gap);
+}
+
+.nav ul a {
+  color: var(--text-color-1);
+  font-family: var(--font-secondary);
+  font-size: var(--gap);
+}

@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --color-bg: #151C25;
+  --color-bg-2: #26313F;
+  --color-contrast: #55e5A4;
+  --text-color-1: #FFFFFF;
+  --text-color-2: #E7E7E7;
+  --font-primary: "Bebas Neue", sans-serif;
+  --font-secondary: "Manrope", sans-serif;
+  --font-size-base: 16px;
+  --font-size-large: 24px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --gap: 16px;
+  --gap-s: 8px;
+}

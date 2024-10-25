@@ -1,0 +1,86 @@
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: calc(100vh - 80px);
+  gap: 40px;
+}
+
+.introGrid h1 {
+  font-family: var(--font-primary);
+  color: var(--text-color-1);
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.introGrid h2 {
+  font-family: var(--font-primary);
+  color: var(--color-contrast);
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.introGrid p {
+  font-family: var(--font-secondary);
+  color: var(--text-color-2);
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.introGrid img {
+  border-radius: var(--gap-s);
+}
+
+.contactInfo {
+  display: flex;
+  gap: var(--gap);
+}
+
+.contactInfo a {
+  background-color: var(--color-bg-2);
+  padding: var(--gap-s);
+  border-radius: 30px;
+}
+
+.contactInfo a:hover {
+  background-color: #131111;
+  padding: var(--gap-s);
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.contactInfoButton {
+  background-color: var(--color-contrast) !important;
+  color: var(--color-bg);
+  padding: var(--gap-s) var(--gap);
+  border-radius: 30px;
+  font-weight: bold;
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  border: 1px solid var(--color-contrast);
+}
+
+.contactInfoButton::after {
+  content: "";
+  display: block;
+  height: 8px;
+  width: 8px;
+  background-color: var(--color-bg);
+  border-radius: 30px;
+}
+
+.contactInfoButton:hover {
+  background-color: var(--color-bg) !important;
+  color: var(--color-contrast);
+  transition: 0.3s;
+}
+
+.contactInfoButton:hover::after {
+  background-color: var(--color-contrast);
+}

@@ -1,0 +1,68 @@
+.aboutMeDivider {
+  position: relative;
+}
+
+.aboutMeDivider::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--color-contrast);
+  bottom: -40;
+  left: 0;
+}
+
+.aboutMeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.aboutMeGrid h2 {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 40px;
+  color: var(--text-color-1);
+  margin-bottom: 20px;
+}
+
+.aboutMeGrid h3 {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--color-contrast);
+  margin-bottom: 20px;
+}
+
+.aboutMeGrid p {
+  line-height: 1.3;
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  color: var(--text-color-2);
+  margin-bottom: 30px;
+}
+
+.aboutMeGrid button {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 30px;
+  color: var(--color-contrast);
+  background: none;
+  border: 1px solid var(--color-contrast);
+  padding: var(--gap-s) var(--gap);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.aboutMeGrid button:hover {
+  background-color: var(--color-contrast);
+  color: var(--color-bg);
+  transition: 0.3s;
+}
+
+.aboutMePic {
+  padding: 20px;
+  background: linear-gradient(to left, var(--color-contrast) 30%, var(--color-bg) 30%);
+}
