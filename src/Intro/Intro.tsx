@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from './Intro.module.css';
 import pic from '../assets/side-view-attractive-hispanic-software-developer-programming-using-computer-while-working-from-home.jpg';
 import linkedin from '../assets/bxl-linkedin.svg.svg';
