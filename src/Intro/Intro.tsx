@@ -1,8 +1,8 @@
-
 import styles from './Intro.module.css';
 import pic from '../assets/side-view-attractive-hispanic-software-developer-programming-using-computer-while-working-from-home.jpg';
 import linkedin from '../assets/bxl-linkedin.svg.svg';
 import github from '../assets/bxl-github.svg.svg';
+import { Link } from 'react-router-dom';
 
 const Intro = () => {
   return (
@@ -15,9 +15,9 @@ const Intro = () => {
           e fáceis de usar.
         </p>
         <div className={styles.contactInfo}>
-          <a href="" className={styles.contactInfoButton}>
+          <Link to="/#contato" className={styles.contactInfoButton}>
             Contato
-          </a>{' '}
+          </Link>{' '}
           <a href="">
             <img src={github} alt="github" />
           </a>

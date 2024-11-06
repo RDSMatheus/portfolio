@@ -1,10 +1,25 @@
+.headerBg {
+  background-color: var(--color-bg);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px;
 }
 
+@media (min-width: 800px) {
+  .headerSticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    transition: 0.3s;
+    animation: slideDown 0.3s forwards;
+    z-index: 999999999;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+  }
+}
 .logo {
   color: var(--color-contrast) !important;
   font-family: var(--font-primary);
@@ -21,4 +36,32 @@
   color: var(--text-color-1);
   font-family: var(--font-secondary);
   font-size: var(--gap);
+}
+
+@media (max-width: 800px) {
+  .nav ul {
+    display: none;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-bg);
+    z-index: 9999999;
+  }
+  .headerBg {
+    margin-bottom: 80px;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

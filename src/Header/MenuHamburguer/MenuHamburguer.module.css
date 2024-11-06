@@ -1,0 +1,97 @@
+@media (min-width: 800px) {
+  .menuContainer {
+    display: none;
+  }
+}
+.menuButtonWrapper {
+  width: 40px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menuHamburguerButton {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 3px;
+  background-color: var(--color-contrast);
+}
+
+.menuHamburguerButton::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 3px;
+  top: 10px;
+  background-color: var(--color-contrast);
+  transition: 0.3s;
+}
+
+.menuHamburguerButton::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 3px;
+  bottom: 10px;
+  background-color: var(--color-contrast);
+  transition: 0.3s;
+}
+
+.menuHamburguerButton.btnActive {
+  background-color: transparent;
+}
+
+.menuHamburguerButton.btnActive::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menuHamburguerButton.btnActive::before {
+  bottom: 0;
+  transform: rotate(135deg);
+}
+
+.menuWrapper {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100vh;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.menuWrapper.menuActive {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menuWrapper.menuActive nav {
+  background-color: var(--text-color-1);
+  max-width: max-content;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+}
+
+.menuWrapper a {
+  margin: 0 auto;
+  text-align: center;
+  border: none;
+  background-color: var(--color-contrast);
+  width: 150px;
+  margin-bottom: 30px;
+  border-radius: 30px;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 30px;
+  color: var(--color-bg);
+  cursor: pointer;
+}

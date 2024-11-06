@@ -4,6 +4,7 @@
   align-items: center;
   height: calc(100vh - 80px);
   gap: 40px;
+  margin-bottom: 30px;
 }
 
 .introGrid h1 {
@@ -83,4 +84,13 @@
 
 .contactInfoButton:hover::after {
   background-color: var(--color-contrast);
+}
+
+@media (max-width: 800px) {
+  .introGrid {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+  }
 }

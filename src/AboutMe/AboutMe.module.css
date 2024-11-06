@@ -1,5 +1,7 @@
 .aboutMeDivider {
   position: relative;
+  margin-bottom: 80px;
+  scroll-margin-top: 110px;
 }
 
 .aboutMeDivider::after {
@@ -8,7 +10,7 @@
   width: 100%;
   height: 2px;
   background: var(--color-contrast);
-  bottom: -40;
+  bottom: -40px;
   left: 0;
 }
 
@@ -44,7 +46,7 @@
   margin-bottom: 30px;
 }
 
-.aboutMeGrid button {
+.aboutMeGrid a {
   font-family: var(--font-primary);
   font-weight: 400;
   font-size: 30px;
@@ -56,7 +58,7 @@
   cursor: pointer;
 }
 
-.aboutMeGrid button:hover {
+.aboutMeGrid a:hover {
   background-color: var(--color-contrast);
   color: var(--color-bg);
   transition: 0.3s;
@@ -65,4 +67,15 @@
 .aboutMePic {
   padding: 20px;
   background: linear-gradient(to left, var(--color-contrast) 30%, var(--color-bg) 30%);
+}
+
+@media (max-width: 800px) {
+  .aboutMeGrid {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .aboutMePic {
+    grid-row: 2;
+  }
 }

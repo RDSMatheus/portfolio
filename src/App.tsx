@@ -3,6 +3,9 @@ import './App.css';
 import Header from './Header/Header';
 import Intro from './Intro/Intro';
 import AboutMe from './AboutMe/AboutMe';
+import Skills from './Skills/Skills';
+import Projects from './Projects/Projects';
+import Contact from './Contact/Contact';
 
 function App() {
   return (
@@ -10,6 +13,9 @@ function App() {
       <Header />
       <Intro />
       <AboutMe />
+      <Skills />
+      <Projects />
+      <Contact />
     </BrowserRouter>
   );
 }
