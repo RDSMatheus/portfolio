@@ -63,6 +63,7 @@
 .active label {
   transform: translateY(-16px);
   color: var(--color-bg);
+  font-size: 12px;
 }
 
 .contactTextArea textarea:focus {

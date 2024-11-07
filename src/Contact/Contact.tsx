@@ -47,18 +47,24 @@ const Contact = () => {
       setModalMessage('Insira sua messagem');
       return;
     }
-
+    console.log(import.meta.env.KEY);
     try {
       setLoading(true);
       if (form.current) {
         await emailjs
-          .sendForm('service_77o5bpg', 'template_fez8llk', form.current, {
-            publicKey: 'kqMSsBvVV3PAYAjTY',
-          })
+          .sendForm(
+            import.meta.env.VITE_KEY,
+            import.meta.env.VITE_TEMPLATE,
+            form.current,
+            {
+              publicKey: import.meta.env.VITE_PUBLIC,
+            },
+          )
           .then(
             () => {
               setOpenModal(true);
               setModalMessage('Mensagem enviada com sucesso!');
+              setImg(true);
               setName('');
               setEmail('');
               setSubject('');
@@ -66,6 +72,7 @@ const Contact = () => {
             },
             (error) => {
               setModalMessage(error.text);
+              setImg(false);
             },
           );
       }

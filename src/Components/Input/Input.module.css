@@ -18,6 +18,7 @@
 .inputActive label {
   transform: translateY(-16px);
   color: var(--color-bg);
+  font-size: 12px;
 }
 
 .input input:focus {
