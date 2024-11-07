@@ -16,7 +16,7 @@ const AboutMe = () => {
             front-end. Nos meus momentos livres, sou apaixonado por jogos e
             estou sempre explorando novas ferramentas e tecnologias.
           </p>
-          <a href="/docs/Profile.pdf" target="_blank">
+          <a href="/Profile.pdf" target="_blank">
             currículo
           </a>
         </div>
