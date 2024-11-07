@@ -20,6 +20,7 @@
   font-weight: 400;
   color: var(--text-color-1);
   margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 .projectsTitle p {
@@ -27,6 +28,7 @@
   font-size: 18px;
   color: var(--text-color-2);
   margin-bottom: 30px;
+  padding: 0 20px;
 }
 
 .projectsGrid {
@@ -173,6 +175,20 @@
   .projectsImg img {
     width: 350px;
     height: 225px;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .projectsImg {
+    width: max-content;
+    height: max-content;
+  }
+
+  .projectsImg img {
+    max-width: 400px;
+    height: 250px;
     object-fit: cover;
     border-radius: 30px;
   }

@@ -36,6 +36,26 @@
   color: var(--text-color-1);
   font-family: var(--font-secondary);
   font-size: var(--gap);
+  position: relative;
+}
+
+.nav ul a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: var(--color-contrast);
+  transform: translate(50%);
+  transition: 0.3s;
+  opacity: 0;
+  bottom: -8px;
+}
+
+.nav ul a:hover::after {
+  transform: translate(0);
+  opacity: 1;
+  width: 100%;
 }
 
 @media (max-width: 800px) {

@@ -62,23 +62,31 @@
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100vh;
-  transform: translateX(-100%);
   opacity: 0;
   transition: 0.3s;
+  visibility: hidden;
 }
 
 .menuWrapper.menuActive {
   opacity: 1;
-  transform: translateX(0);
+  visibility: inherit;
 }
 
-.menuWrapper.menuActive nav {
+.menuWrapper nav {
   background-color: var(--text-color-1);
   max-width: max-content;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  transform: translateX(-100%);
   padding: 20px 40px;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.menuWrapper.menuActive nav {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .menuWrapper a {

@@ -76,6 +76,9 @@
   height: 30px;
   border: none;
   border-bottom: 2px solid #484848;
+  resize: none;
+  padding: 0.75rem;
+  font-family: var(--font-secondary);
 }
 
 .contactForm button {
@@ -101,5 +104,16 @@ p {
 @media (max-width: 800px) {
   .contactGrid {
     grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  .contactInfo {
+    margin-bottom: 20px;
+  }
+  .contactInfo h3 {
+    font-size: 40px;
+  }
+
+  .contactForm {
+    margin-bottom: 20px;
   }
 }

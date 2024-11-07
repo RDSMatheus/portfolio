@@ -4,6 +4,7 @@ import linkedin from '../assets/bxl-linkedin.svg.svg';
 import Input from '../Components/Input/Input';
 import React from 'react';
 import emailjs from '@emailjs/browser';
+import Modal from '../Components/Modal/Modal';
 
 const Contact = () => {
   const [name, setName] = React.useState('');
@@ -12,10 +13,41 @@ const Contact = () => {
   const [message, setMessage] = React.useState('');
   const [isActive, setIsActive] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
+  const [openModal, setOpenModal] = React.useState(false);
+  const [modalMessage, setModalMessage] = React.useState('');
+  const [img, setImg] = React.useState(false);
   const form = React.useRef<HTMLFormElement | null>(null);
 
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!name) {
+      setOpenModal(true);
+      setImg(false);
+      setModalMessage('Insira seu nome');
+      return;
+    }
+
+    if (!subject) {
+      setOpenModal(true);
+      setImg(false);
+      setModalMessage('Insira um assunto');
+      return;
+    }
+
+    if (!email) {
+      setOpenModal(true);
+      setImg(false);
+      setModalMessage('Insira seu email');
+      return;
+    }
+
+    if (!message) {
+      setOpenModal(true);
+      setImg(false);
+      setModalMessage('Insira sua messagem');
+      return;
+    }
+
     try {
       setLoading(true);
       if (form.current) {
@@ -25,15 +57,20 @@ const Contact = () => {
           })
           .then(
             () => {
-              console.log('SUCCESS!');
+              setOpenModal(true);
+              setModalMessage('Mensagem enviada com sucesso!');
+              setName('');
+              setEmail('');
+              setSubject('');
+              setMessage('');
             },
             (error) => {
-              console.log('FAILED...', error.text);
+              setModalMessage(error.text);
             },
           );
       }
     } catch (error) {
-      console.log(error);
+      alert(error);
     } finally {
       setLoading(false);
     }
@@ -49,10 +86,18 @@ const Contact = () => {
             juntos!
           </h3>
           <div className={styles.contactLinks}>
-            <a href="">
+            <a
+              href="https://www.linkedin.com/in/matheus-r-d-s/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <img src={linkedin} alt="Linkedin" />
             </a>
-            <a href="">
+            <a
+              href="https://github.com/RDSMatheus"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <img src={github} alt="Github" />
             </a>
           </div>
@@ -106,6 +151,14 @@ const Contact = () => {
         )}
       </form>
       <p>© 2024 Matheus Ramos</p>
+      {openModal && (
+        <Modal
+          img={img}
+          message={modalMessage}
+          openModal={openModal}
+          setOpenModal={setOpenModal}
+        />
+      )}
     </footer>
   );
 };

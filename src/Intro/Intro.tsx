@@ -18,10 +18,14 @@ const Intro = () => {
           <Link to="/#contato" className={styles.contactInfoButton}>
             Contato
           </Link>{' '}
-          <a href="">
+          <a href="https://github.com/RDSMatheus" rel="noopener noreferrer" target='_blank'>
             <img src={github} alt="github" />
           </a>
-          <a href="">
+          <a
+            href="https://www.linkedin.com/in/matheus-r-d-s/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <img src={linkedin} alt="linkedin" />
           </a>
         </div>
