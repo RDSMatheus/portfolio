@@ -8,7 +8,6 @@ const MenuHamburguer = () => {
   const location = useLocation();
 
   React.useEffect(() => {
-    console.log(location.hash);
     if (location.hash) {
       const element = document.querySelector(location.hash);
       if (element) element.scrollIntoView({ behavior: 'smooth' });

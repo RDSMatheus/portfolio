@@ -47,7 +47,6 @@ const Contact = () => {
       setModalMessage('Insira sua messagem');
       return;
     }
-    console.log(import.meta.env.KEY);
     try {
       setLoading(true);
       if (form.current) {
