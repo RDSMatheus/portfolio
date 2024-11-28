@@ -3,12 +3,20 @@ import pic from '../assets/side-view-attractive-hispanic-software-developer-prog
 import linkedin from '../assets/bxl-linkedin.svg.svg';
 import github from '../assets/bxl-github.svg.svg';
 import { Link } from 'react-router-dom';
+import React from 'react';
+import AnimateIntro from './AnimateIntro/AnimateIntro';
 
 const Intro = () => {
+  const ref = React.useRef<HTMLDivElement | null>(null);
+
   return (
     <main className={`${styles.introGrid} container`}>
-      <div>
-        <h1>Olá, eu sou matheus Ramos</h1>
+      <AnimateIntro divRef={ref} />
+      <div ref={ref}>
+        <h1>
+          <span>Olá,</span>
+          <span> eu sou matheus Ramos</span>
+        </h1>
         <h2>Desenvolvedor front-end</h2>
         <p>
           Desenvolvedor front-end capixaba apaixonado por criar sites acessíveis
@@ -18,7 +26,11 @@ const Intro = () => {
           <Link to="/#contato" className={styles.contactInfoButton}>
             Contato
           </Link>{' '}
-          <a href="https://github.com/RDSMatheus" rel="noopener noreferrer" target='_blank'>
+          <a
+            href="https://github.com/RDSMatheus"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <img src={github} alt="github" />
           </a>
           <a

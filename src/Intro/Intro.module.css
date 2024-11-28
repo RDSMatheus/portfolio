@@ -15,12 +15,23 @@
   font-weight: 400;
 }
 
+.introGrid h1 span {
+  display: inline-block;
+  transform: translateY(-60px);
+  opacity: 0;
+  transition: 0.5s;
+  margin-right: 8px;
+}
+
 .introGrid h2 {
   font-family: var(--font-primary);
   color: var(--color-contrast);
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: 400;
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: 1s;
 }
 
 .introGrid p {
@@ -29,6 +40,9 @@
   margin-bottom: 20px;
   font-size: 18px;
   line-height: 1.2;
+  transform: translateX(60px);
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .introGrid img {
@@ -38,6 +52,9 @@
 .contactInfo {
   display: flex;
   gap: var(--gap);
+  transform: translateY(60px);
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .contactInfo a {
