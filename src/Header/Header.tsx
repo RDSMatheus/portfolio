@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import style from './Header.module.css';
 import React from 'react';
 import MenuHamburguer from './MenuHamburguer/MenuHamburguer';
+import { debounce } from './../debounce';
 
 const Header = () => {
   const header = React.useRef<HTMLDivElement>(null);
@@ -9,7 +10,6 @@ const Header = () => {
   const location = useLocation();
 
   React.useEffect(() => {
-    
     if (location.hash) {
       const element = document.querySelector(location.hash);
       if (element) element.scrollIntoView({ behavior: 'smooth' });
@@ -17,7 +17,6 @@ const Header = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [location]);
-
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +32,7 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', debounce(handleScroll, 500));
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

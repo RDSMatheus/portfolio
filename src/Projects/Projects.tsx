@@ -13,8 +13,13 @@ import nodesvg from '../assets/node-js-svgrepo-com.svg';
 import tssvg from '../assets/typescript-icon-svgrepo-com.svg';
 import jssvg from '../assets/javascript-svgrepo-com.svg';
 import html from '../assets/html-5-svgrepo-com (1) 2.svg';
+import React from 'react';
+import AnimateScrollArray from '../AnimateScrollArray/AnimateScrollArray';
+
 
 const Projects = () => {
+  const ref = React.useRef<HTMLDivElement[]>([]);
+  console.log(ref);
   return (
     <section id="projetos" className={styles.projecstDivider}>
       <div className={`container`}>
@@ -25,11 +30,17 @@ const Projects = () => {
             paixão pelo desenvolvimento front-end.
           </p>
         </div>
-        <div className={styles.projectsGrid}>
-          <div className={styles.projectsImg}>
+        <div
+          className={styles.projectsGrid}
+          ref={(element) => {
+            if (element instanceof HTMLDivElement) ref.current?.push(element);
+          }}
+        >
+          <AnimateScrollArray divRef={ref} />
+          <div className={styles.projectsImg} data-set="left-anime">
             <img src={agnusDei} alt="website da Agnus Dei" />
           </div>
-          <div className={styles.projectsContent}>
+          <div className={styles.projectsContent} data-set="right-anime">
             <h3>Website Rede Agnus Dei</h3>
             <p>
               Projeto em que colaborei com um colega, responsável pelo back-end,
@@ -58,11 +69,16 @@ const Projects = () => {
             </a>
           </div>
         </div>
-        <div className={styles.projectsGrid}>
-          <div className={styles.projectsImg}>
+        <div
+          className={styles.projectsGrid}
+          ref={(element) => {
+            if (element instanceof HTMLDivElement) ref.current?.push(element);
+          }}
+        >
+          <div className={styles.projectsImg} data-set="left-anime">
             <img src={zoeExpress} alt="website da ZOÉ Express" />
           </div>
-          <div className={styles.projectsContent}>
+          <div className={styles.projectsContent} data-set="right-anime">
             <h3>Projeto ZOÉ EXPRESS</h3>
             <p>
               Projeto para uma empresa de entregas, onde colaborei com um colega
@@ -98,14 +114,19 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className={styles.projectsGrid}>
-          <div className={styles.projectsImg}>
+        <div
+          className={styles.projectsGrid}
+          ref={(element) => {
+            if (element instanceof HTMLDivElement) ref.current?.push(element);
+          }}
+        >
+          <div className={styles.projectsImg} data-set="left-anime">
             <img
               src={brasaGourmet}
               alt="website do restaurante Brasa Gourmet Grill"
             />
           </div>
-          <div className={styles.projectsContent}>
+          <div className={styles.projectsContent} data-set="right-anime">
             <h3>Projeto restaurante Brasa Gourmet Grill</h3>
             <p>
               Projeto de uma landing page de um restaurante, focando em uma
@@ -141,11 +162,16 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className={styles.projectsGrid}>
-          <div className={styles.projectsImg}>
+        <div
+          className={styles.projectsGrid}
+          ref={(element) => {
+            if (element instanceof HTMLDivElement) ref.current?.push(element);
+          }}
+        >
+          <div className={styles.projectsImg} data-set="left-anime">
             <img src={strongFit} alt="website StrongFit academia" />
           </div>
-          <div className={styles.projectsContent}>
+          <div className={styles.projectsContent} data-set="right-anime">
             <h3>Projeto StrongFit Academia</h3>
             <p>
               Projeto fullstack desenvolvido para uma academia, com

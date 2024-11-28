@@ -1,4 +1,5 @@
 @import url(./variables.css);
+@import url(AnimateScroll/AnimateScroll.css);
 
 * {
   margin: 0;

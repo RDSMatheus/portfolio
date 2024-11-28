@@ -17,6 +17,7 @@ const Contact = () => {
   const [modalMessage, setModalMessage] = React.useState('');
   const [img, setImg] = React.useState(false);
   const form = React.useRef<HTMLFormElement | null>(null);
+  const ref = React.useRef<HTMLElement | null>(null);
 
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -83,7 +84,11 @@ const Contact = () => {
   };
 
   return (
-    <footer className={`${styles.contactGrid} container`} id="contato">
+    <footer
+      className={`${styles.contactGrid} container`}
+      id="contato"
+      ref={ref}
+    >
       <h2>contato</h2>
       <div className={styles.contactInfo}>
         <div>

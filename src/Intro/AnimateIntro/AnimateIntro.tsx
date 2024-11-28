@@ -33,7 +33,6 @@ const AnimateIntro = ({
     applyAnimation(div, 'translate(0)', 'initial', 1200);
   }, [divRef]);
 
-  setTimeout(() => {});
   return null;
 };
 
