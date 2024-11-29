@@ -37,10 +37,7 @@ const AnimateScroll = ({
       if (isVisible) {
         applyAnimation(leftAnimes, 'translateX(0)', '1', 'visible');
         applyAnimation(rightAnimes, 'translateX(0)', '1', 'visible');
-      } else {
-        applyAnimation(leftAnimes, 'translateX(-60px)', '0', 'hidden');
-        applyAnimation(rightAnimes, 'translateX(60px)', '0', 'hidden');
-      }
+      } 
     };
     window.addEventListener('scroll', debounce(handleScroll, 200));
 

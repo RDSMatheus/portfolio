@@ -1,8 +1,8 @@
 import styles from './Projects.module.css';
-import strongFit from '../assets/strongfit.png';
-import brasaGourmet from '../assets/brasa-gourmet.png';
-import zoeExpress from '../assets/zoe-express.png';
-import agnusDei from '../assets/agnus-dei.png';
+import strongFit from '../assets/strongfit-gif-ezgif.com-optimize (1).gif';
+import brasaGourmet from '../assets/brasa_gourmet_grill-ezgif.com-optimize.gif';
+import agnusDei from '../assets/agnus-dei-gif-ezgif.com-optimize.gif';
+import zoeExpress from '../assets/zoe-express-gif-ezgif.com-optimize (1).gif';
 import arrow from '../assets/arrow.svg';
 import github from '../assets/green-github.svg';
 import reactsvg from '../assets/react-javascript-js-framework-facebook-svgrepo-com.svg';
@@ -15,7 +15,6 @@ import jssvg from '../assets/javascript-svgrepo-com.svg';
 import html from '../assets/html-5-svgrepo-com (1) 2.svg';
 import React from 'react';
 import AnimateScrollArray from '../AnimateScrollArray/AnimateScrollArray';
-
 
 const Projects = () => {
   const ref = React.useRef<HTMLDivElement[]>([]);

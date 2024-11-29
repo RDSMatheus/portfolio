@@ -19,6 +19,7 @@ img {
 
 body {
   background-color: var(--color-bg);
+  overflow-x: none;
 }
 
 .container {

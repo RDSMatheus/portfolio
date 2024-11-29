@@ -3,9 +3,9 @@ div[data-set="left-anime"] {
   transform: translateX(-60px);
   opacity: 0;
   transition:
-    transform 0.5s ease,
-    opacity 0.5s ease,
-    visibility 0.5s ease;
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    visibility 0.3s ease;
   visibility: hidden;
 }
 
@@ -13,8 +13,8 @@ div[data-set="right-anime"] {
   transform: translateX(60px);
   opacity: 0;
   transition:
-    transform 0.5s ease,
-    opacity 0.5s ease,
-    visibility 0.5s ease;
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    visibility 0.3s ease;
   visibility: hidden;
 }
