@@ -11,8 +11,8 @@ const BilingualButton = () => {
   function handleClick() {
     setLangChanger(!langChanger);
     if (langChanger) {
-      setLang('en');
-    } else setLang('pt');
+      setLang('pt');
+    } else setLang('en');
   }
   return (
     <button

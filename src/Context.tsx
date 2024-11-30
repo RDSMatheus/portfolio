@@ -159,7 +159,7 @@ export const useData = () => {
 
 export const GlobalContext = ({ children }: React.PropsWithChildren) => {
   const [pageText, setPageText] = React.useState<PageTextI | null>(null);
-  const [lang, setLang] = React.useState<'pt' | 'en'>('en');
+  const [lang, setLang] = React.useState<'pt' | 'en'>('pt');
 
   React.useEffect(() => {
     async function fetchLangText() {
