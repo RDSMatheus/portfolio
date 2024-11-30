@@ -9,22 +9,15 @@ const BilingualButton = () => {
   const { setLang } = useData();
 
   function handleClick() {
+    console.log(langChanger);
     setLangChanger(!langChanger);
     if (langChanger) {
       setLang('pt');
     } else setLang('en');
   }
   return (
-    <button
-      onClick={handleClick}
-      className={`${style.toggle} ${langChanger ? style.toggled : ''}`}
-    >
-      <span>
-        <img src={brazil} alt="portugues" />
-      </span>
-      <span>
-        <img src={usa} alt="inglês" />
-      </span>
+    <button onClick={handleClick} className={style.toggle}>
+      <img src={langChanger ? brazil : usa} />
     </button>
   );
 };

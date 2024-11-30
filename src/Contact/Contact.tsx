@@ -95,7 +95,11 @@ const Contact = () => {
         <h2>{pageText.contact.heading[lang]}</h2>
         <div className={styles.contactInfo}>
           <div>
-            <h3>
+            <h3
+              style={{
+                maxWidth: `${lang === 'pt' ? '15ch' : '10ch'}`,
+              }}
+            >
               {pageText.contact.title.first[lang]}
               <span> {pageText.contact.title.detail[lang]} </span>
               {pageText.contact.title.last[lang]}

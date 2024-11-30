@@ -26,7 +26,6 @@
   font-size: 60px;
   font-weight: 400;
   margin-bottom: 20px;
-  max-width: 15ch;
 }
 
 .contactInfo span {
@@ -88,7 +87,7 @@
   display: block;
   border: none;
   background-color: var(--color-contrast);
-  padding: 13px 35px;
+  padding: 0.5rem 1.5rem;
   border-radius: 30px;
   font-family: var(--font-primary);
   font-weight: 400;

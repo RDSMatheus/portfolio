@@ -1,30 +1,11 @@
 .toggle {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   border-radius: 30px;
   border: none;
   padding: 2px;
   position: relative;
   cursor: pointer;
+  width: 35px;
   background: var(--color-bg-2);
-}
-
-.toggle::after {
-  content: "";
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  display: block;
-  border-radius: 30px;
-  top: 2px;
-  left: 2px;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
-  background-color: var(--color-contrast);
-  transition: 0.3s ease-in-out;
-}
-
-.toggle.toggled::after {
-  transform: translate(30px);
 }
 
 .toggle img {

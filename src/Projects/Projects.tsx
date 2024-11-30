@@ -174,7 +174,7 @@ const Projects = () => {
                 </li>
                 <li>
                   <span>{pageText.projects.strongfit.role[lang]}</span>
-                  <div>Desenvolvedor fullstack</div>
+                  <div>Fullstack</div>
                 </li>
               </ul>
               <div className={styles.projectsContentLinks}>

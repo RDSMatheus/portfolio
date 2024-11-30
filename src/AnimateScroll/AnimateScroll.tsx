@@ -1,5 +1,6 @@
 import React from 'react';
 import { debounce } from './../debounce';
+import { throttle } from '../throttle';
 
 const AnimateScroll = ({
   divRef,
@@ -37,9 +38,11 @@ const AnimateScroll = ({
       if (isVisible) {
         applyAnimation(leftAnimes, 'translateX(0)', '1', 'visible');
         applyAnimation(rightAnimes, 'translateX(0)', '1', 'visible');
-      } 
+      }
     };
-    window.addEventListener('scroll', debounce(handleScroll, 200));
+    handleScroll();
+    window.addEventListener('scroll', debounce(handleScroll, 400));
+    window.addEventListener('scroll', throttle(handleScroll, 400));
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [divRef]);

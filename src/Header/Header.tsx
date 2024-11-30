@@ -5,6 +5,7 @@ import MenuHamburguer from './MenuHamburguer/MenuHamburguer';
 import { debounce } from './../debounce';
 import { useData } from '../Context';
 import BilingualButton from '../Components/BilingualButton/BilingualButton';
+import { throttle } from '../throttle';
 
 const Header = () => {
   const header = React.useRef<HTMLDivElement>(null);
@@ -36,6 +37,7 @@ const Header = () => {
     };
 
     window.addEventListener('scroll', debounce(handleScroll, 500));
+    window.addEventListener('scroll', throttle(handleScroll, 500));
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
