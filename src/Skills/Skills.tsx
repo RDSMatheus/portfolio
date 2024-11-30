@@ -1,32 +1,29 @@
 import React from 'react';
 import styles from './Skills.module.css';
 import AnimateScroll from '../AnimateScroll/AnimateScroll';
+import { useData } from '../Context';
 
 const Skills = () => {
+  const { pageText, lang } = useData();
   const ref = React.useRef<HTMLDivElement | null>(null);
-  return (
-    <section className={styles.skillsDivider}>
-      <div className={`${styles.skillsGrid} container`} ref={ref}>
-        <AnimateScroll divRef={ref} />
-        <h2 data-set="left-anime">Minhas habilidades</h2>
-        <div data-set="right-anime">
-          <p>
-            Estou constantemente buscando aprimorar minhas habilidades e
-            expandir meus conhecimentos. Estas são as tecnologias de front-end
-            nas quais tenho sólido domínio:
-          </p>
-          <ul>
-            <li>HTML</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>CSS</li>
-            <li>Scss</li>
-            <li>React</li>
-          </ul>
+
+  if (pageText)
+    return (
+      <section className={styles.skillsDivider}>
+        <div className={`${styles.skillsGrid} container`} ref={ref}>
+          <AnimateScroll divRef={ref} />
+          <h2 data-set="left-anime">{pageText?.skills.heading[lang]}</h2>
+          <div data-set="right-anime">
+            <p>{pageText.skills.paragraph[lang]}</p>
+            <ul>
+              {pageText.skills.list[lang].map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
-  );
+      </section>
+    );
 };
 
 export default Skills;

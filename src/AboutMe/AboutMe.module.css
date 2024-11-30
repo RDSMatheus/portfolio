@@ -18,7 +18,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
   margin-bottom: 30px;
   overflow: hidden;
 }

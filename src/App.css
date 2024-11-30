@@ -19,10 +19,11 @@ img {
 
 body {
   background-color: var(--color-bg);
-  overflow-x: none;
+  overflow-x: hidden;
+  transition: 0.3s;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1366px;
   margin: 0 auto;
 }

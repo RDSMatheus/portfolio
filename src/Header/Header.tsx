@@ -3,11 +3,16 @@ import style from './Header.module.css';
 import React from 'react';
 import MenuHamburguer from './MenuHamburguer/MenuHamburguer';
 import { debounce } from './../debounce';
+import { useData } from '../Context';
+import brazil from '../assets/flag-for-brazil-svgrepo-com.svg';
+import usa from '../assets/usa-svgrepo-com.svg';
 
 const Header = () => {
   const header = React.useRef<HTMLDivElement>(null);
   const [isSticky, setIsSticky] = React.useState(false);
+  const [langChanger, setLangChanger] = React.useState(false);
   const location = useLocation();
+  const { lang, pageText, setLang } = useData();
 
   React.useEffect(() => {
     if (location.hash) {
@@ -38,37 +43,64 @@ const Header = () => {
     };
   }, []);
 
-  return (
-    <header
-      className={` ${style.headerBg} ${isSticky ? style.headerSticky : ''} `}
-      ref={header}
-    >
-      <div
-        className={`${style.header} 
-       container`}
+  function handleClick() {
+    setLangChanger(!langChanger);
+    if (langChanger) {
+      setLang('en');
+    } else setLang('pt');
+  }
+
+  if (pageText)
+    return (
+      <header
+        className={` ${style.headerBg} ${isSticky ? style.headerSticky : ''} `}
+        ref={header}
       >
-        <div>
-          <Link to="/" className={style.logo}>
-            Matheus Ramos
-          </Link>
+        <div
+          className={`${style.header} 
+       container`}
+        >
+          <div>
+            <Link to="/" className={style.logo}>
+              Matheus Ramos
+            </Link>
+          </div>
+          <nav className={style.nav}>
+            <ul>
+              <li>
+                <Link to="/#sobre">{pageText.header['about-nav'][lang]}</Link>
+              </li>
+              <li>
+                <Link to="/#projetos">
+                  {pageText.header['projects-nav'][lang]}
+                </Link>
+              </li>
+              <li>
+                <Link to="/#contato">
+                  {pageText.header['contact-nav'][lang]}
+                </Link>
+              </li>
+              <li>
+                <button
+                  onClick={handleClick}
+                  className={`${style.toggle} ${
+                    langChanger ? style.toggled : ''
+                  }`}
+                >
+                  <span>
+                    <img src={brazil} alt="portugues" />
+                  </span>
+                  <span>
+                    <img src={usa} alt="inglês" />
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <MenuHamburguer />
         </div>
-        <nav className={style.nav}>
-          <ul>
-            <li>
-              <Link to="/#sobre">Sobre</Link>
-            </li>
-            <li>
-              <Link to="/#projetos">Projetos</Link>
-            </li>
-            <li>
-              <Link to="/#contato">Contato</Link>
-            </li>
-          </ul>
-        </nav>
-        <MenuHamburguer />
-      </div>
-    </header>
-  );
+      </header>
+    );
 };
 
 export default Header;

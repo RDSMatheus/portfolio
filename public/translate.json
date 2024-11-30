@@ -1,0 +1,190 @@
+{
+  "header": {
+    "about-nav": {
+      "pt": "Sobre",
+      "en": "About"
+    },
+    "projects-nav": {
+      "pt": "Projetos",
+      "en": "Projects"
+    },
+    "contact-nav": {
+      "pt": "Contatos",
+      "en": "Contact"
+    }
+  },
+  "intro": {
+    "greeting": {
+      "pt": "Olá,",
+      "en": "Hi,"
+    },
+    "name": {
+      "pt": "eu sou Matheus Ramos",
+      "en": "I'm Matheus Ramos"
+    },
+    "title": {
+      "pt": "Desenvolvedor front-end",
+      "en": "Front-end developer"
+    },
+    "paragraph": {
+      "pt": "Desenvolvedor front-end capixaba com foco em criar sites acessíveis e fáceis de usar.",
+      "en": "Capixaba front-end developer focused on creating accessible and user-friendly websites."
+    },
+    "button": {
+      "pt": "contato",
+      "en": "contact"
+    }
+  },
+  "about": {
+    "heading": {
+      "pt": "sobre mim",
+      "en": "about me"
+    },
+    "subheading": {
+      "pt": "Quem sou eu?",
+      "en": "Who am I?"
+    },
+    "paragraph": {
+      "pt": "Sou Matheus Ramos, atualmente cozinheiro em uma lanchonete, mas em transição para o mundo da tecnologia, com foco em desenvolvimento front-end. Nos meus momentos livres, sou apaixonado por jogos e estou sempre explorando novas ferramentas e tecnologias.",
+      "en": "I'm Matheus Ramos, currently a cook at a snack bar, but transitioning into the tech world with a focus on front-end development. In my free time, I’m passionate about games and always exploring new tools and technologies."
+    },
+    "button": {
+      "pt": "currículo",
+      "en": "resume"
+    }
+  },
+  "skills": {
+    "heading": {
+      "pt": "Minhas habilidades",
+      "en": "My skills"
+    },
+    "paragraph": {
+      "pt": "Estou constantemente buscando aprimorar minhas habilidades e expandir meus conhecimentos. Estas são as tecnologias de front-end nas quais tenho sólido domínio:",
+      "en": "I am constantly seeking to improve my skills and expand my knowledge. These are the front-end technologies in which I have solid expertise:"
+    },
+    "list": {
+      "pt": ["HTML", "JavaScript", "TypeScript", "CSS", "Scss", "React"],
+      "en": ["HTML", "JavaScript", "TypeScript", "CSS", "Scss", "React"]
+    }
+  },
+  "projects": {
+    "heading": {
+      "pt": "Meus projetos",
+      "en": "My projects"
+    },
+    "paragraph": {
+      "pt": "Aqui estão alguns dos projetos selecionados que demonstram minha paixão pelo desenvolvimento front-end.",
+      "en": "Here are some selected projects that showcase my passion for front-end development."
+    },
+    "zoe": {
+      "description": {
+        "pt": "Projeto para uma empresa de entregas, onde colaborei com um colega no desenvolvimento do back-end. Fiquei responsável pelo front-end e design. Foi o meu primeiro projeto real, mas acabou sendo descontinuado devido ao fechamento da empresa.",
+        "en": "A project for a delivery company where I collaborated with a colleague on the back-end development. I was responsible for the front-end and design. It was my first real project but was discontinued due to the company's closure."
+      },
+      "info": {
+        "pt": "Informações do projeto",
+        "en": "project info"
+      },
+      "stack": {
+        "pt": "tecnologia",
+        "en": "stacks"
+      },
+      "role": {
+        "pt": "função",
+        "en": "role"
+      }
+    },
+    "brasa": {
+      "description": {
+        "pt": "Projeto de uma landing page de um restaurante, focando em uma interface atraente, responsiva e otimizada para a experiência do usuário.",
+        "en": "A landing page project for a restaurant, focusing on an attractive, responsive, and user-friendly interface."
+      },
+      "info": {
+        "pt": "Informações do projeto",
+        "en": "project info"
+      },
+      "stack": {
+        "pt": "tecnologia",
+        "en": "stacks"
+      },
+      "role": {
+        "pt": "função",
+        "en": "role"
+      }
+    },
+    "agnus": {
+      "description": {
+        "pt": "Projeto em que colaborei com um colega, responsável pelo back-end, enquanto desenvolvi o front-end e o design. O resultado foi uma interface totalmente responsiva e com um design limpo e moderno.",
+        "en": "A project where I collaborated with a colleague responsible for the back-end while I developed the front-end and design. The result was a fully responsive interface with a clean and modern design."
+      },
+      "info": {
+        "pt": "Informações do projeto",
+        "en": "project info"
+      },
+      "stack": {
+        "pt": "tecnologia",
+        "en": "stacks"
+      },
+      "role": {
+        "pt": "função",
+        "en": "role"
+      }
+    },
+    "strongfit": {
+      "description": {
+        "pt": "Projeto fullstack desenvolvido para uma academia, com funcionalidades que permitem receber pré-matrículas e formulários de contato. O visual é envolvente, adaptado para diferentes dispositivos e focado em garantir uma experiência de navegação fluida.",
+        "en": "A fullstack project developed for a gym, with features to receive pre-registrations and contact forms. The visuals are engaging, adapted for different devices, and focused on ensuring a smooth navigation experience."
+      },
+      "info": {
+        "pt": "Informações do projeto",
+        "en": "project info"
+      },
+      "stack": {
+        "pt": "tecnologia",
+        "en": "stacks"
+      },
+      "role": {
+        "pt": "função",
+        "en": "role"
+      }
+    }
+  },
+  "contact": {
+    "heading": {
+      "pt": "contato",
+      "en": "contact"
+    },
+    "title": {
+      "first": {
+        "pt": "Vamos",
+        "en": "Lets"
+      },
+      "detail": {
+        "pt": "trabalhar",
+        "en": "work"
+      },
+      "last": {
+        "pt": "juntos!",
+        "en": "together!"
+      }
+    },
+    "form": {
+      "name": {
+        "pt": "Nome",
+        "en": "Name"
+      },
+      "subject": {
+        "pt": "Assunto",
+        "en": "Subject"
+      },
+      "message": {
+        "pt": "Menssagem",
+        "en": "Message"
+      },
+      "button": {
+        "pt": "Enviar",
+        "en": "Send"
+      }
+    }
+  }
+}
