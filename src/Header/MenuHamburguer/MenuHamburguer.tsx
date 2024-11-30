@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import style from './MenuHamburguer.module.css';
 import React from 'react';
+import BilingualButton from '../../Components/BilingualButton/BilingualButton';
 
 const MenuHamburguer = () => {
   const [isActive, setIsActive] = React.useState(false);
@@ -17,6 +18,7 @@ const MenuHamburguer = () => {
   }, [location]);
   return (
     <div className={style.menuContainer}>
+      <BilingualButton />
       <button
         className={style.menuButtonWrapper}
         onClick={() => setIsActive(!isActive)}

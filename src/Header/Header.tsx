@@ -4,15 +4,13 @@ import React from 'react';
 import MenuHamburguer from './MenuHamburguer/MenuHamburguer';
 import { debounce } from './../debounce';
 import { useData } from '../Context';
-import brazil from '../assets/flag-for-brazil-svgrepo-com.svg';
-import usa from '../assets/usa-svgrepo-com.svg';
+import BilingualButton from '../Components/BilingualButton/BilingualButton';
 
 const Header = () => {
   const header = React.useRef<HTMLDivElement>(null);
   const [isSticky, setIsSticky] = React.useState(false);
-  const [langChanger, setLangChanger] = React.useState(false);
   const location = useLocation();
-  const { lang, pageText, setLang } = useData();
+  const { lang, pageText } = useData();
 
   React.useEffect(() => {
     if (location.hash) {
@@ -42,13 +40,6 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  function handleClick() {
-    setLangChanger(!langChanger);
-    if (langChanger) {
-      setLang('en');
-    } else setLang('pt');
-  }
 
   if (pageText)
     return (
@@ -81,19 +72,7 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <button
-                  onClick={handleClick}
-                  className={`${style.toggle} ${
-                    langChanger ? style.toggled : ''
-                  }`}
-                >
-                  <span>
-                    <img src={brazil} alt="portugues" />
-                  </span>
-                  <span>
-                    <img src={usa} alt="inglês" />
-                  </span>
-                </button>
+                <BilingualButton />
               </li>
             </ul>
           </nav>
