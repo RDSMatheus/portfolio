@@ -41,8 +41,8 @@ const AnimateScroll = ({
       }
     };
     handleScroll();
-    window.addEventListener('scroll', debounce(handleScroll, 400));
-    window.addEventListener('scroll', throttle(handleScroll, 400));
+    window.addEventListener('scroll', debounce(handleScroll, 200));
+    window.addEventListener('scroll', throttle(handleScroll, 200));
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [divRef]);
