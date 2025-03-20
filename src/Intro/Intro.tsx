@@ -1,5 +1,5 @@
 import styles from './Intro.module.css';
-import pic from '../assets/side-view-attractive-hispanic-software-developer-programming-using-computer-while-working-from-home.jpg';
+import pic from '../assets/Profile picture (2).webp';
 import linkedin from '../assets/bxl-linkedin.svg.svg';
 import github from '../assets/bxl-github.svg.svg';
 import { Link } from 'react-router-dom';

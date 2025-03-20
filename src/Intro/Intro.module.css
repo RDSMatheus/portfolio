@@ -47,7 +47,7 @@
 }
 
 .introGrid img {
-  border-radius: var(--gap-s);
+  border-radius: 50%;
 }
 
 .contactInfo {

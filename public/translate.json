@@ -23,12 +23,12 @@
       "en": "I'm Matheus Ramos"
     },
     "title": {
-      "pt": "Desenvolvedor front-end",
-      "en": "Front-end developer"
+      "pt": "Desenvolvedor fullstack",
+      "en": "Fullstack developer"
     },
     "paragraph": {
-      "pt": "Desenvolvedor front-end capixaba com foco em criar sites acessíveis e fáceis de usar.",
-      "en": "Capixaba front-end developer focused on creating accessible and user-friendly websites."
+      "pt": "Desenvolvedor fullstack capixaba com foco em criar sites acessíveis e fáceis de usar.",
+      "en": "Capixaba fullstack developer focused on creating accessible and user-friendly websites."
     },
     "button": {
       "pt": "contato",
@@ -45,8 +45,8 @@
       "en": "Who am I?"
     },
     "paragraph": {
-      "pt": "Sou Matheus Ramos, atualmente cozinheiro em uma lanchonete, mas em transição para o mundo da tecnologia, com foco em desenvolvimento front-end. Nos meus momentos livres, sou apaixonado por jogos e estou sempre explorando novas ferramentas e tecnologias.",
-      "en": "I'm Matheus Ramos, currently a cook at a snack bar, but transitioning into the tech world with a focus on front-end development. In my free time, I’m passionate about games and always exploring new tools and technologies."
+      "pt": "E aí! Sou Matheus Ramos, dev fullstack com foco em Node.js, React e Next.js. Sempre na correria pra aprender coisas novas e melhorar minhas habilidades. Quando não estou codando, você me encontra jogando games ou fuçando em alguma tecnologia nova que apareceu por aí.",
+      "en": "Hey there! I'm Matheus Ramos, a fullstack dev focused on Node.js, React and Next.js. Always hustling to learn new things and level up my skills. When I'm not coding, you'll find me playing games or tinkering with some cool new tech that just came out."
     },
     "button": {
       "pt": "currículo",
@@ -63,8 +63,26 @@
       "en": "I am constantly seeking to improve my skills and expand my knowledge. These are the front-end technologies in which I have solid expertise:"
     },
     "list": {
-      "pt": ["HTML", "JavaScript", "TypeScript", "CSS", "Scss", "React"],
-      "en": ["HTML", "JavaScript", "TypeScript", "CSS", "Scss", "React"]
+      "pt": [
+        "HTML",
+        "JavaScript",
+        "TypeScript",
+        "CSS",
+        "Scss",
+        "React",
+        "Node.js",
+        "Express.js"
+      ],
+      "en": [
+        "HTML",
+        "JavaScript",
+        "TypeScript",
+        "CSS",
+        "Scss",
+        "React",
+        "Node.js",
+        "Express.js"
+      ]
     }
   },
   "projects": {
