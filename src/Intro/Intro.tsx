@@ -33,7 +33,7 @@ const Intro = () => {
               <img src={github} alt="github" />
             </a>
             <a
-              href="https://www.linkedin.com/in/matheus-r-d-s/"
+              href="https://www.linkedin.com/in/matheusramos-dev/"
               rel="noopener noreferrer"
               target="_blank"
             >

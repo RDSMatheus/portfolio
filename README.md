@@ -1,50 +1,35 @@
-# React + TypeScript + Vite
+# Portfólio - Matheus Ramos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um site de portfólio moderno e responsivo construído com React, TypeScript e Vite.
 
-Currently, two official plugins are available:
+## Link ao Vivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Confira o portfólio ao vivo em: [www.matheusramos-dev.com.br](https://www.matheusramos-dev.com.br)
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- 🌐 Suporte bilíngue (Português/Inglês)
+- 📱 Design totalmente responsivo
+- 🎨 Interface moderna com animações suaves
+- 📧 Formulário de contato com integração ao EmailJS
+- 🎯 Otimização de desempenho com debounce/throttle
+- 🔍 SEO amigável
 
-- Configure the top-level `parserOptions` property like this:
+## Tecnologias
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- React 18
+- TypeScript
+- CSS Modules
+- Vite
+- EmailJS
+- React Router DOM
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Principais Funcionalidades
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Navegação Responsiva**: Menu hambúrguer amigável para dispositivos móveis
+- **Animações Suaves**: Animações acionadas por rolagem usando Intersection Observer
+- **Suporte Bilíngue**: Internacionalização completa com alternador de idioma
+- **Formulário de Contato**: Integração com EmailJS para envio de mensagens
+- **Desempenho**: Otimizado com funções debounce e throttle
+- **Design Moderno**: Interface limpa com CSS Modules
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```

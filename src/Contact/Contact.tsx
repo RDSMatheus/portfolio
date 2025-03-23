@@ -106,7 +106,7 @@ const Contact = () => {
             </h3>
             <div className={styles.contactLinks}>
               <a
-                href="https://www.linkedin.com/in/matheus-r-d-s/"
+                href="https://www.linkedin.com/in/matheusramos-dev/"
                 rel="noopener noreferrer"
                 target="_blank"
               >

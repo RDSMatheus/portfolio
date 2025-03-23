@@ -20,7 +20,7 @@ const AboutMe = () => {
             <h2>{pageText.about.heading[lang]}</h2>
             <h3>{pageText.about.subheading[lang]}</h3>
             <p>{pageText.about.paragraph[lang]}</p>
-            <a href="/matheus-ramos-curriculo.pdf" target="_blank">
+            <a href="/Currículo Matheus Ramos - Tecnologia" target="_blank">
               {pageText.about.button[lang]}
             </a>
           </div>

@@ -70,6 +70,10 @@
   background: linear-gradient(to left, var(--color-contrast) 30%, var(--color-bg) 30%);
 }
 
+.aboutMePic img {
+  transform: scaleX(-1);
+}
+
 @media (max-width: 800px) {
   .aboutMeGrid {
     grid-template-columns: 1fr;
