@@ -19,7 +19,7 @@ const Intro = () => {
             <span>{pageText.intro.greeting[lang]}</span>
             <span>{pageText.intro.name[lang]}</span>
           </h1>
-          <h2>{pageText.intro.name[lang]}</h2>
+          <h2>{pageText.intro.title[lang]}</h2>
           <p>{pageText.intro.paragraph[lang]}</p>
           <div className={styles.contactInfo}>
             <Link to="/#contato" className={styles.contactInfoButton}>
